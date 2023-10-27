@@ -1,11 +1,9 @@
 package com.GerTar.model;
 
 import com.GerTar.repository.TarefaRepository;
-//import com.GerTar.model.Tarefa;
 
 import java.util.List; 
 import java.util.Date; 
-
 
 public class GerTarSingleton {
 

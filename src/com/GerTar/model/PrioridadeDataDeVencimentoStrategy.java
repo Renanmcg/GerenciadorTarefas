@@ -1,7 +1,6 @@
 package com.GerTar.model;
 
 import java.util.Date;
-//import com.GerTar.model.PrioridadeStrategy;
 
 public class PrioridadeDataDeVencimentoStrategy implements PrioridadeStrategy {
 

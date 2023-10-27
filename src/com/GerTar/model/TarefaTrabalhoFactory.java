@@ -1,7 +1,5 @@
 package com.GerTar.model;
 
-//import com.GerTar.model.TarefaFactory;
-//import com.GerTar.model.TarefaTrabalho;
 import java.util.Date;
 
 public class TarefaTrabalhoFactory implements TarefaFactory {
