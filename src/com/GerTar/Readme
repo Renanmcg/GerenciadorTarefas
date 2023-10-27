@@ -1,0 +1,38 @@
+Nome do Projeto: Sistema de Gerenciamento de Tarefas (GerTar)
+
+Descrição:
+O Sistema de Gerenciamento de Tarefas (GerTar) é uma aplicação de console desenvolvida em Java que permite aos usuários gerenciar suas tarefas de forma eficiente. O projeto implementa vários conceitos e padrões de design para garantir a extensibilidade, flexibilidade e facilidade de manutenção do código.
+
+Características e Componentes Principais:
+
+Tarefas: O sistema permite a criação, listagem, atualização e exclusão de tarefas. Cada tarefa possui os seguintes atributos:
+
+ID: Um identificador único para cada tarefa.
+Nome: O nome descritivo da tarefa.
+Descrição: Detalhes sobre a tarefa.
+Data de Vencimento: A data em que a tarefa deve ser concluída.
+Prioridade: Um valor numérico que representa a prioridade da tarefa.
+TarefaFactory: Fornece a capacidade de criar diferentes tipos de tarefas, como tarefas pessoais e de trabalho. Isso é possível através da implementação da interface TarefaFactory.
+
+PrioridadeStrategy: Estratégias são usadas para calcular a prioridade de uma tarefa com base em diferentes critérios, como nome, descrição e data de vencimento. O projeto implementa estratégias diferentes, como PrioridadeNomeStrategy, PrioridadeDescricaoStrategy e PrioridadeDataDeVencimentoStrategy.
+
+GerTarSingleton: O projeto utiliza o padrão Singleton para garantir que haja apenas uma instância do sistema em execução. Isso permite que os dados das tarefas sejam compartilhados em todo o sistema.
+
+TarefaRepository: Gerencia o armazenamento das tarefas em uma lista. Isso inclui a adição, listagem e exclusão de tarefas.
+
+TarefaFacade: Uma fachada (facade) simplifica a interação com o sistema, permitindo operações comuns, como criação, listagem, atualização e exclusão de tarefas, de forma mais conveniente.
+
+Main Class: A classe principal (Main) é onde o sistema é inicializado. Os usuários podem interagir com o sistema por meio de operações simples de console.
+
+Funcionamento:
+
+Os usuários podem criar tarefas, especificando seus atributos.
+As tarefas são armazenadas em uma lista gerenciada pelo TarefaRepository.
+As estratégias de prioridade são aplicadas para calcular a prioridade de cada tarefa com base em critérios específicos.
+Os usuários podem listar tarefas, exibir suas informações e atualizar atributos, como nome, descrição, data de vencimento e prioridade.
+As tarefas também podem ser excluídas do sistema.
+Extensibilidade:
+Uma das principais características do projeto é sua extensibilidade. Novas estratégias de prioridade, tipos de tarefa e funcionalidades podem ser adicionadas facilmente, seguindo os princípios de design orientado a objetos.
+
+Uso Futuro:
+O GerTar pode ser uma base para o desenvolvimento de uma aplicação mais completa de gerenciamento de tarefas, com uma interface de usuário gráfica, persistência de dados em um banco de dados, notificações e muito mais.
