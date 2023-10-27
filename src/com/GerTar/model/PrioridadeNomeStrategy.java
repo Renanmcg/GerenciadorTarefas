@@ -6,7 +6,7 @@ public class PrioridadeNomeStrategy implements PrioridadeStrategy {
         String nome = tarefa.getNome();
         int tamanhoDoNome = nome.length();
 
-        // Atribua uma prioridade com base no tamanho do nome da tarefa
+        // Atribui uma prioridade com base no tamanho do nome da tarefa
         if (tamanhoDoNome <= 5) {
             return 1; // Tarefas com nomes muito curtos têm alta prioridade
         } else if (tamanhoDoNome <= 10) {

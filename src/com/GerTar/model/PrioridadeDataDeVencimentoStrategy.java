@@ -14,7 +14,7 @@ public class PrioridadeDataDeVencimentoStrategy implements PrioridadeStrategy {
         long diferencaMilissegundos = dataVencimento.getTime() - dataAtual.getTime();
         long diferencaDias = diferencaMilissegundos / (1000 * 60 * 60 * 24); // Converte milissegundos para dias
 
-        // Você pode ajustar a lógica de prioridade com base nos valores de diferençaDias
+        // A lógica de prioridade pode ser ajustada com base nos valores de diferençaDias
         if (diferencaDias <= 0) {
             return 1; // A tarefa está atrasada, alta prioridade
         } else if (diferencaDias <= 7) {

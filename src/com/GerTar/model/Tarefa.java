@@ -28,8 +28,6 @@ public class Tarefa {
         this.id = id;
     }
 
-    // Getters e Setters para os atributos
-
     public String getNome() {
         return nome;
     }

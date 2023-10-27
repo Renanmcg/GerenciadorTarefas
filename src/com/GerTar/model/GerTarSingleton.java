@@ -11,7 +11,6 @@ public class GerTarSingleton {
     private TarefaRepository tarefaRepository; 
 
     private GerTarSingleton() {
-
         tarefaRepository = new TarefaRepository();
     }
 
@@ -40,17 +39,19 @@ public class GerTarSingleton {
     
     // Método para atualizar uma tarefa
     public void atualizarTarefa(int id, String novoNome, String novaDescricao, Date novaDataDeVencimento, int novaPrioridade) {
-            List<Tarefa> tarefas = tarefaRepository.listarTarefas();
-            
-            for (Tarefa tarefa : tarefas) {
-                if (tarefa.getId() == id) {
-                    tarefa.setNome(novoNome);
-                    tarefa.setDescricao(novaDescricao);
-                    tarefa.setDataDeVencimento(novaDataDeVencimento);
-                    tarefa.setPrioridade(novaPrioridade);
-                    break;
-                }
+        // Obter a lista de tarefas
+        List<Tarefa> tarefas = tarefaRepository.listarTarefas();
+        
+        // Iterar sobre a lista para encontrar a tarefa com o ID correspondente
+        for (Tarefa tarefa : tarefas) {
+            if (tarefa.getId() == id) {
+                // Atualizar os atributos da tarefa
+                tarefa.setNome(novoNome);
+                tarefa.setDescricao(novaDescricao);
+                tarefa.setDataDeVencimento(novaDataDeVencimento);
+                tarefa.setPrioridade(novaPrioridade);
+                break;
             }
+        }
     }
-      
 }
